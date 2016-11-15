@@ -2,25 +2,31 @@
 <form action="/job-posts" method="post">
     <h2>Job Opening Info</h2>
     <div class="form-group">
-        <label for="job-title">job-title</label>
+        <label for="job-title">Job Title: </label>
         <input id= "job-title" name="job-title" type="text" required="required" placeholder="Engineer">
     </div>
     <div class="form-group">
-        <label for="job-description">job-description</label>
-        <input id= "job-description" name="job-description" type="text" required="required" placeholder="In this job you will be required to engineer things and also engineer other things">
+        <label for="job-description">Job Description</label>
+        <input id= "job-description" name="job-description" class="form-control" type="text" required="required" placeholder="In this job you will be required to engineer things and also engineer other things">
     </div>
     <h2>Poster Contact Info</h2>
     <div class="form-group">
-        <label for="contact-name">contact-name</label>
-        <input id= "contact-name" name="contact-name" type="text" required="required" placeholder="Peter">
+        <label for="contact-name">Contact Name: </label>
+        <input id= "contact-name" name="contact-name" type="text" required="required" placeholder="Peter Dahl">
     </div>
     <div class="form-group">
-        <label for="contact-email">contact-email</label>
-        <input id= "contact-email" name="contact-email" type="text" required="required" placeholder="peterdahl@gmail.com">
+        <label for="contact-email">Contact Email: </label>
+        <input id= "contact-email" name="contact-email" type="email" required="required" placeholder="peterdahl@gmail.com">
     </div>
     <div class="form-group">
-        <label for="contact-phone">contact-phone</label>
-        <input id= "contact-phone" name="contact-phone" type="text" required="required" placeholder="+1(555)555-5555">
+        <label for="contact-phone">Contact Phone: </label>
+        <input id= "contact-phone" name="contact-phone" required="required" placeholder="(555)555-5555" type="tel" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}">
     </div>
     <button type="submit">Post Job</button>
 </form>
+
+<style>
+.form-control {
+    width: 50vw;
+}
+</style>

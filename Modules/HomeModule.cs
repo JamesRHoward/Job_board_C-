@@ -3,11 +3,15 @@ using System.Collections.Generic;
 
 namespace JobBoard
 {
-  public class HomeModule : NancyModule
-  {
-    public HomeModule()
+    public class HomeModule : NancyModule
     {
-      Get["/"] = _ => View["index.cshtml"];
+        public HomeModule()
+        {
+            Get["/"] = _ => View["index.cshtml"];
+            Post["/job-posts"] = _ =>
+            {
+            return View["job_posts.cshtml"];
+            };
+        }
     }
-  }
 }
