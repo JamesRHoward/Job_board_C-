@@ -9,10 +9,11 @@ namespace JobBoard.Objects
         private ContactInfo _contact;
         private static List<JobOpening> _instances = new List<JobOpening> {};
 
-        public JobOpening(string jobTitle, string jobDescription)
+        public JobOpening(string jobTitle, string jobDescription, ContactInfo jobContact)
         {
             _title = jobTitle;
             _description = jobDescription;
+            _contact = jobContact;
         }
 
         public void SetTitle(string jobTitle)
